@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Exec=/home/_your_user_home_dir_name_/.conky/unixie_clock/autostart_unixie_clock.sh
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Nam=uNixie Clock
+Comment=Show a nixie tube clock on the desktop
