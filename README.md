@@ -1,5 +1,5 @@
 
-[![uNixie Clock](./resources/photos/uNixie-Clock.png)](https://cthru.hopto.org/unixie-clock)
+[![Unixie-Clock](./resources/photos/Unixie-Clock.png)](https://cthru.hopto.org/Unixie-Clock)
 
 [![CC BY-NC-SA 4.0][shield cc-by-nc-sa]][cc-by-nc-sa]
 [![GitHub release (latest by date)][shield release]][latest release]
@@ -17,18 +17,18 @@ You will always know the time with this styleful Nixie Tube Clock on your Linux 
 - [Introduction](#introduction)  
 - [Features](#features)  
 - [Installation](#installation)  
-- [Upgrading](#upgrading)
-- [Usage](#usage)  
+- [Configuration](#configuration)  
 - [Release Notes](#release-notes)  
 - [Copyright and License](#copyright-and-license)
 
 ## Features
 - Displays time in hours, minutes and seconds.
 - Each second is accompanied by a nostalgic transition of the changed digits.
+- Conifgurable size and position on screen.
 
 ## Installation
 ### Requirements
-To use uNixie Clock, you need:
+To use Unixie-Clock, you need:
 - A Linux operating system.
 - The latest release of [Conky](https://github.com/brndnmtthws/conky).
 
@@ -36,13 +36,13 @@ To use uNixie Clock, you need:
 #### Step 1 - Install Conky
 Install [Conky](https://github.com/brndnmtthws/conky) (`conky-all` package) using a package manager on your Linux OS or using the latest version from the [Conky website](https://github.com/brndnmtthws/conky).
 
-#### Step 2 - Download and Extract uNixie Clock
-- Go to the [Releases page][latest release] to download the source code of the latest uNixie Clock release.
+#### Step 2 - Download and Extract Unixie-Clock
+- Go to the [Releases page][latest release] to download the source code of the latest Unixie-Clock release.
 - On the [Releases page][latest release], in the _Assets_ section, click on the _Source code (tar.gz)_ link to download 
   the sources.
 - Save the tar.gz file with the sources on your system.
 - Create a folder `.conky/unixie_clock` in your home directory.
-- Extract all contents of main `uNixie-Clock-[version x.y.z]` folder in the tar.gz file to the `.conky/unixie_clock` folder in the home directory of your system.
+- Extract all contents of main `Unixie-Clock-[version x.y.z]` folder in the tar.gz file to the `.conky/unixie_clock` folder in the home directory of your system.
 
 #### Step 3 - Prepare for first run
 - Open the `~/.conky/unixie_clock` directory.
@@ -95,6 +95,31 @@ You can use the example `unixie_clock.desktop` file provided, but you need to ed
 		> cd ~/.conky/unixie_clock  
 		> cp unixie_clock.desktop ~/.config/autostart/unixie_clock.desktop
 
+## Configuration
+### Position and Scale
+You can change the display position and scale of the Unixie-Clock by altering the following settings in the `unixie_clock.conky` file0.
+
+#### Position
+To change the position of the clock on screen, change the values of the following lines:
+
+> alignment = 'top_middle',  
+  gap_x = 10,  
+  gap_y = 10,
+
+For more information on these settings, please refer to the [Conky manual](https://conky.cc/config_settings).
+
+#### Scale
+To change the scale of the clock, look for the following line:
+
+> lua_startup_hook = 'conky_config /home_your_user_home_dir_name_/.conky/unixie_clock/ 100',
+
+The 100 at the end of the line represents the scale in percent, 100 being the normal full scale.
+
+E.g. if you wish to display the clock at half scale, use:
+
+> lua_startup_hook = 'conky_config /home_your_user_home_dir_name_/.conky/unixie_clock/ 50',
+
+
 ## Release Notes
 For a full changelog of all versions, please look in [`CHANGELOG.md`](./CHANGELOG.md).
 
@@ -112,9 +137,9 @@ If you're more into a TL;DR approach, start [`here`][tldrlegal cc-by-nc-sa].
 [shield cc-by-nc-sa]: https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png
 [tldrlegal cc-by-nc-sa]: https://tldrlegal.com/license/creative-commons-attribution-noncommercial-sharealike-4.0-international-(cc-by-nc-sa-4.0)
 [cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
-[shield release]: https://img.shields.io/github/v/release/CTHRU/uNixie-Clock?color=orange
-[shield release date]: https://img.shields.io/github/release-date/CTHRU/uNixie-Clock?color=orange
-[latest release]: https://github.com/CTHRU/uNixie-Clock/releases/latest
+[shield release]: https://img.shields.io/github/v/release/CTHRU/Unixie-Clock?color=orange
+[shield release date]: https://img.shields.io/github/release-date/CTHRU/Unixie-Clock?color=orange
+[latest release]: https://github.com/CTHRU/Unixie-Clock/releases/latest
 [shield buymeacoffee]: https://img.shields.io/static/v1?label=Buy%20me%20a%20coffee&message=Thank%20You&logo=buymeacoffee
 [buymeacoffee]: https://www.buymeacoffee.com/CTHRU
 [shield paypal]: https://img.shields.io/static/v1?label=Donate&message=Thank%20You&logo=PayPal
