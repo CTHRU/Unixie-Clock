@@ -1,8 +1,8 @@
 ---
 name: Feature request
-about: Suggest an idea for this project
-title: ''
-labels: ''
+about: Suggest an idea for Unixie-Clock
+title: "[FEATURE]"
+labels: enhancement
 assignees: ''
 
 ---
@@ -18,3 +18,7 @@ A clear and concise description of any alternative solutions or features you've 
 
 **Additional context**
 Add any other context or screenshots about the feature request here.
+
+ATTENTION: Please do NOT add screenshots that contain copyrighted materials
+or materials that are not in accordance with the code of conduct.
+Thank you.
